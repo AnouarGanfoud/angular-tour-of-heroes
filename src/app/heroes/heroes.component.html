@@ -1,0 +1,14 @@
+<div>
+  <label>Name:
+    <input [(ngModel)]="gui.name" placeholder="name">
+  </label>
+</div>
+
+<div>
+  <h2>My GUIS</h2>
+<ul class="guis">
+    <li *ngFor="let gui of guis" (click)="onSelect(gui)">
+        <span class="badge"> {{gui.id}}</span> {{gui.name}}
+    </li>
+</ul>
+</div>
